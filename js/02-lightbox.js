@@ -19,12 +19,18 @@ function createGalleryItems(arr) {
     listGallery.insertAdjacentHTML('afterbegin',arr.map((elem) => createGalleryItem(elem)).join(''))      
 }
 createGalleryItems(galleryItems);
-//вмикаємо лайтбокс
+
+listGallery.addEventListener('click', onGalleryItemClick)
+//створюємо функцію слухача
+function onGalleryItemClick(event) {
+    event.preventDefault();
+    //вмикаємо лайтбокс
     const lightbox = new SimpleLightbox('.gallery a',
-        {captionType: 'attr',
+        {
+            captionType: 'attr',
             captionsData: 'alt',
             captionDelay: 250,
             captionPosition: 'bottom',
-    });
+        });
     lightbox.open();
-
+}
