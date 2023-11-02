@@ -20,17 +20,14 @@ function createGalleryItems(arr) {
 }
 createGalleryItems(galleryItems);
 
-listGallery.addEventListener('click', onGalleryItemClick)
-//створюємо функцію слухача
-function onGalleryItemClick(event) {
-    event.preventDefault();
+
     //вмикаємо лайтбокс
-    const lightbox = new SimpleLightbox('.gallery a',
+    let lightbox = new SimpleLightbox('.gallery a',
         {
             captionType: 'attr',
             captionsData: 'alt',
             captionDelay: 250,
             captionPosition: 'bottom',
         });
-    lightbox.open();
-}
+  
+
