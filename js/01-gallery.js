@@ -35,7 +35,13 @@ function onGalleryItemClick(event) {
     <img src="${imgUrl}">
 `);
     instance.show();
+//після відкриття модалки вмикаємо слухача на Esc
+document.addEventListener('keydown', onEscDown);
+function onEscDown(event) {
+    event.preventDefault();
+    if (event.code === 'Escape') { instance.close(); console.log('hello'); };     
 }
-
+}
+       
 
 
