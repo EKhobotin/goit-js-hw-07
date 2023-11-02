@@ -31,7 +31,7 @@ function onGalleryItemClick(event) {
     <img src="${imgUrl}">
 `);
     instance.show();
-//після відкриття модалки вмикаємо слухача на Esc
+//після відкриття модалки вмикаємо слухача на Esc і не вимикаємо))))
     document.addEventListener('keydown', onEscDown);
     //функція слухача Esc
 function onEscDown(event) {
